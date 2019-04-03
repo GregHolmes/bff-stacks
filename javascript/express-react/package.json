@@ -1,0 +1,23 @@
+{
+  "name": "express-react",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "nodemon ./bin/www",
+    "dev:client": "cd client && npm start",
+    "dev": "concurrently --kill-others-on-fail 'npm run dev:server' 'npm run dev:client'",
+    "prestart": "cd client && npm run build",
+    "start": "node ./bin/www",
+    "postinstall": "cd client && npm install"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  }
+}
