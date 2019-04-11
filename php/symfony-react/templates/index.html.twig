@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Welcome to Symfony - React {% endblock %}
+
+{% block body %}
+  <div>
+      <div id="root">Welcome to the React page</div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="{{ asset('build/js/app.js') }}"></script>
+{% endblock %}
